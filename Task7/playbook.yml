@@ -14,7 +14,7 @@
 
     - name: Install MySQL database
       apt:
-        name: "{{ item }}"
+        name: '{{ item }}'
         state:  present
       with_items:
        - mysql-server
@@ -35,7 +35,7 @@
       
     - name: Install Python Dependencies
       pip:
-        name: {{ item }}'
+        name: '{{ item }}'
         state: present
       with_items:
          - flask
