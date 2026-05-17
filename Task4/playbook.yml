@@ -1,0 +1,27 @@
+-
+  name: Deploy a web application
+  hosts: db_and_web_server
+  tasks:
+    - name: Install dependencies
+      apt: name={{ item }} state=present
+      with_items:
+       - python
+       - python-setuptools
+       - python-dev
+       - build-essential
+       - python-pip
+       - python-mysqldb
+
+    - name: Install MySQL database
+      apt:
+        name: "{{ item }}"
+        state: present
+      with_items:
+       - mysql-server
+       - mysql-client
+       
+    - name: Start MYSQL service
+      service: 
+        name: mysql 
+        state: started
+        enabled: true
