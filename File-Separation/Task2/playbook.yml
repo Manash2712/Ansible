@@ -11,6 +11,8 @@
        - build-essential
        - python-pip
        - python-mysqldb
+    
+    - include: ./tasks/deploy_db.yml
 
     - name: Install Python Flask dependencies
       pip:
