@@ -15,7 +15,7 @@ Why Use Asynchronous Execution?
 Use this when you want to block the playbook until the task is complete, but you know the task takes a long time and might drop the SSH connection
 - Parallel Task Execution: You can kick off time-consuming operations on multiple hosts simultaneously instead of waiting for each one to finish sequentially.
 - Fire-and-Forget Actions: You can trigger background daemons or scripts (like a Flask server bootstrap) and completely detach Ansible from the lifecycle of that process.
-Setting poll: 0 tells Ansible to start the command and immediately move to the very next task without waiting for a response [1]. This is ideal for background services.
+Setting poll: 0 tells Ansible to start the command and immediately move to the very next task without waiting for a response. This is ideal for background services.
 
 The Two Core KeywordsTo make a task asynchronous, you append two specific keywords to the task definition:
 - async: The maximum amount of time (in seconds) that Ansible will allow the task to run. If the job takes longer than this value, Ansible terminates it.
