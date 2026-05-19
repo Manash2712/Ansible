@@ -21,3 +21,16 @@ Setting *poll: 0* tells Ansible to start the command and immediately move to the
 The Two Core KeywordsTo make a task asynchronous, you append two specific keywords to the task definition:
 - __async__: The maximum amount of time (in seconds) that Ansible will allow the task to run. If the job takes longer than this value, Ansible terminates it.
 - __poll__: How often (in seconds) Ansible checks back with the host to see if the job is finished.
+
+### Strategy
+A strategy plugin in Ansible controls how tasks are distributed and executed across your host fleet. It dictates the pacing, ordering, and coordination of your nodes as they move through a playbook.By default, Ansible processes tasks linearly across all targets, but changing the strategy allows you to change this behavior for optimization or rolling deployments.
+
+- Basic Playbook Execution: A linear execution strategy where tasks are completed one after another.
+
+- Default Strategy - Linear: When multiple servers are involved, the default strategy (linear) executes tasks in parallel, waiting for all servers to complete a task before progressing. This synchronization ensures all servers are in the same state during installation.
+
+- Free Strategy: 'free' strategy, lets each server perform its tasks independently, leading to faster completion times since there’s no waiting for other servers.
+
+- Batch Processing with Serial Option: The 'serial' option, allowing users to control how many servers to process simultaneously. This offers flexibility, especially when managing many servers.
+
+- Ansible Configuration: The Ansible configuration file (Ansible.cfg), sets the maximum number of parallel processes (or forks). By default, Ansible allows for five forks, but this can be adjusted to optimize performance based on resources.
