@@ -1,0 +1,3 @@
+-
+  name: Deploy a web application
+  hosts: db_and_web_server
