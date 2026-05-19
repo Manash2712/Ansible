@@ -1,7 +1,7 @@
 ### Error Handling in Ansible
 
 Ansible provides built-in mechanisms to intercept failures, clean up corrupted states, and keep your automation running smoothly instead of immediately crashing.
-By default, if a task fails on a host, Ansible stops executing all subsequent tasks for that specific host. 
+By default, if a task fails on a host, Ansible stops executing all subsequent tasks for that specific host. However, in multi-server environments, Ansible continues executing tasks on other servers, unless specified otherwise.
 
 You can override and manage this behavior using four primary patterns:
 
