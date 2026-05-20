@@ -1,0 +1,3 @@
+Introduction: We are trying to write a playbook to generate a file with random name everytime. The first name must be /tmp/random_file_ followed by a random number. eg: /tmp/random_file_1234 
+
+Task: Update the task to modify the file name to use a random number suffix anywhere from 0 to 1000. 
