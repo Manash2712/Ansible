@@ -1,4 +1,4 @@
-# Jinja2 Templating Lecture Notes
+# Jinja2 Templating Notes
 
 Jinja2 templating is a powerful tool used in Ansible for generating dynamic content.
 
