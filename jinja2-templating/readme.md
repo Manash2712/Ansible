@@ -2,6 +2,9 @@
 
 Jinja2 templating is a powerful tool used in Ansible for generating dynamic content.
 
+More Details: 
+[Templating (Jinja2)](https://docs.ansible.com/projects/ansible/latest/playbook_guide/playbooks_templating.html)
+
 ## Key Concepts
 
 1. **Basic Templating**
@@ -62,3 +65,4 @@ Jinja2 templating is a powerful tool used in Ansible for generating dynamic cont
      ```yaml
      msg: "{{ my_name | upper | replace('MANAS', 'MANASH') }}"
      ```
+     
